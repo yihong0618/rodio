@@ -83,17 +83,8 @@
 
 #![cfg_attr(test, deny(missing_docs))]
 
-#[cfg(feature = "flac")]
-extern crate claxon;
-extern crate cpal;
-#[cfg(feature = "wav")]
-extern crate hound;
 #[macro_use]
 extern crate lazy_static;
-#[cfg(feature = "vorbis")]
-extern crate lewton;
-#[cfg(feature = "mp3")]
-extern crate minimp3;
 
 pub use cpal::{
     traits::DeviceTrait, Device, Devices, DevicesError, Format, InputDevices, OutputDevices

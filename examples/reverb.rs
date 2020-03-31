@@ -1,5 +1,3 @@
-extern crate rodio;
-
 use rodio::Source;
 use std::io::BufReader;
 use std::time::Duration;
