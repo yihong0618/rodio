@@ -1,11 +1,11 @@
 [package]
 name = "rodio"
 version = "0.11.0"
-authors = ["Pierre Krieger <pierre.krieger1708@gmail.com>"]
+authors = ["yihong0618 <zouzou0208@gmail.com>"]
 license = "MIT/Apache-2.0"
 description = "Audio playback library"
 keywords = ["audio", "playback", "gamedev"]
-repository = "https://github.com/RustAudio/rodio"
+repository = "https://github.com/yihong0618/rodio"
 documentation = "http://docs.rs/rodio"
 autoexamples = true
 
@@ -16,10 +16,10 @@ hound = { version = "3.3.1", optional = true }
 lazy_static = "1.0.0"
 lewton = { version = "0.10", optional = true }
 minimp3 = { version = "0.3.2", optional = true }
-reqwest = { version = "0.10.0", default-features = false, features = ["blocking"], optional = true }
+reqwest = { version = "0.10.0", features = ["blocking"], optional = true }
 
 [features]
-default = ["flac", "vorbis", "wav", "mp3"]
+default = ["flac", "vorbis", "wav", "mp3", "http"]
 
 flac = ["claxon"]
 vorbis = ["lewton"]
@@ -32,19 +32,15 @@ https-native = ["http", "reqwest/native-tls"]
 [[example]]
 name = "http_flac"
 path = "examples/http_flac.rs"
-required-features = ["https-rustls"]
 
 [[example]]
 name = "http_mp3"
 path = "examples/http_mp3.rs"
-required-features = ["https-rustls"]
 
 [[example]]
 name = "http_ogg"
 path = "examples/http_ogg.rs"
-required-features = ["https-rustls"]
 
 [[example]]
 name = "http_wav"
 path = "examples/http_wav.rs"
-required-features = ["https-rustls"]
